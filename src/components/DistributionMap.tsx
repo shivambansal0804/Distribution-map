@@ -1,6 +1,6 @@
 import React from "react";
 import { Chart } from "react-google-charts";
-import useChartReadyData from "../hooks/useChartReadyData";
+import useChartData from "../hooks/useChartData";
 
 interface DistributionMapsProps {
   lookupMap: {
@@ -16,46 +16,43 @@ interface DistributionMapsProps {
   displayMode?: string;
   onClick?: (
     datum: { [key: string]: string | number }[],
-    event: any,
-    coordinates: any
+    event: MouseEvent,
+    coordinates: { X: number; Y: number }
   ) => void;
 }
 
-export default function DistributionMap(props: DistributionMapsProps) {
+export default function DistributionMap({
+  lookupMap,
+  data,
+  xKey,
+  yKey,
+  region = "world",
+  resolution,
+  displayMode,
+  onClick,
+}: DistributionMapsProps) {
   const chartArea = React.useRef(document.createElement("div"));
-  const eventObj = React.useRef({});
+  const eventObj = React.useRef(new MouseEvent("dblclick"));
   const element = chartArea.current;
-  element.addEventListener("click", (e: {}) => {
+  element.addEventListener("click", (e: MouseEvent) => {
     eventObj.current = e;
   });
 
-  const {
-    lookupMap,
+  const options = React.useMemo(() => {
+    return {
+      region,
+      resolution,
+      displayMode,
+    };
+  }, [region, resolution, displayMode]);
+
+  const chartData: (string | number)[][] = useChartData({
     data,
+    lookupMap,
     xKey,
     yKey,
-    region = "world",
-    resolution,
-    displayMode,
-    onClick,
-  } = props;
-
-  const options = {
     region,
-    resolution,
-    displayMode,
-  };
-
-  const chartReadydata: (string | number)[][] = useChartReadyData(
-    data,
-    lookupMap,
-    xKey,
-    yKey
-  );
-  chartReadydata.unshift([
-    region in lookupMap ? lookupMap[region].label : region,
-    yKey[0] in lookupMap ? lookupMap[yKey[0]].label : yKey[0],
-  ]);
+  });
 
   return (
     <div ref={chartArea}>
@@ -63,21 +60,22 @@ export default function DistributionMap(props: DistributionMapsProps) {
         chartType="GeoChart"
         width="100%"
         height="50vh"
-        data={chartReadydata}
+        data={chartData}
         mapsApiKey="AIzaSyATwbzs2QohcNsG31ErEkkKD2DciXXSFYw"
         options={options}
         chartEvents={[
           {
             eventName: "select",
             callback: ({ chartWrapper, google }) => {
-              //const chart = chartWrapper.getChart();
-
-              //console.log(chart.getSelection())
-
-              if (onClick) onClick(data, eventObj.current, eventObj.current);
+              if (onClick) {
+                const coordinates = {
+                  X: eventObj.current.screenX,
+                  Y: eventObj.current.screenY,
+                };
+                onClick(data, eventObj.current, coordinates);
+              }
 
               console.log(eventObj.current);
-              //console.log(chartReadydata[chartWrapper.getChart().getSelection()[0].row + 1])
             },
           },
         ]}
