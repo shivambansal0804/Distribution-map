@@ -1,729 +1,730 @@
 import React from "react";
 import "./App.css";
 
-
 import DistributionMap from "./components/DistributionMap";
 
 const sampleData = [
   {
-      "x": "UN",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 274628
+    x: "UN",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 274628,
   },
   {
-      "x": "IN",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 180927
+    x: "IN",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 180927,
   },
   {
-      "x": "US",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 10676
+    x: "US",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 10676,
   },
   {
-      "x": "PK",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 4872
+    x: "PK",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 4872,
   },
   {
-      "x": "GB",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 4517
+    x: "GB",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 4517,
   },
   {
-      "x": "CA",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 1679
+    x: "CA",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 1679,
   },
   {
-      "x": "AE",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 1257
+    x: "AE",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 1257,
   },
   {
-      "x": "AU",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 1150
+    x: "AU",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 1150,
   },
   {
-      "x": "LK",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 945
+    x: "LK",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 945,
   },
   {
-      "x": "FR",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 860
+    x: "FR",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 860,
   },
   {
-      "x": "NP",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 743
+    x: "NP",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 743,
   },
   {
-      "x": "DE",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 684
+    x: "DE",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 684,
   },
   {
-      "x": "BR",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 679
+    x: "BR",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 679,
   },
   {
-      "x": "ID",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 677
+    x: "ID",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 677,
   },
   {
-      "x": "ES",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 673
+    x: "ES",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 673,
   },
   {
-      "x": "MY",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 632
+    x: "MY",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 632,
   },
   {
-      "x": "NG",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 520
+    x: "NG",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 520,
   },
   {
-      "x": "SA",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 477
+    x: "SA",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 477,
   },
   {
-      "x": "MX",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 475
+    x: "MX",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 475,
   },
   {
-      "x": "JP",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 461
+    x: "JP",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 461,
   },
   {
-      "x": "CO",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 400
+    x: "CO",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 400,
   },
   {
-      "x": "ZA",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 392
+    x: "ZA",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 392,
   },
   {
-      "x": "PH",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 390
+    x: "PH",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 390,
   },
   {
-      "x": "TH",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 386
+    x: "TH",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 386,
   },
   {
-      "x": "BD",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 360
+    x: "BD",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 360,
   },
   {
-      "x": "SG",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 353
+    x: "SG",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 353,
   },
   {
-      "x": "KM",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 324
+    x: "KM",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 324,
   },
   {
-      "x": "NL",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 289
+    x: "NL",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 289,
   },
   {
-      "x": "AR",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 283
+    x: "AR",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 283,
   },
   {
-      "x": "VE",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 275
+    x: "VE",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 275,
   },
   {
-      "x": "NZ",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 273
+    x: "NZ",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 273,
   },
   {
-      "x": "IT",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 259
+    x: "IT",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 259,
   },
   {
-      "x": "MV",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 224
+    x: "MV",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 224,
   },
   {
-      "x": "CH",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 221
+    x: "CH",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 221,
   },
   {
-      "x": "QA",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 214
+    x: "QA",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 214,
   },
   {
-      "x": "CL",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 199
+    x: "CL",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 199,
   },
   {
-      "x": "TZ",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 188
+    x: "TZ",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 188,
   },
   {
-      "x": "KE",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 180
+    x: "KE",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 180,
   },
   {
-      "x": "CN",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 175
+    x: "CN",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 175,
   },
   {
-      "x": "IE",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 171
+    x: "IE",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 171,
   },
   {
-      "x": "CF",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 164
+    x: "CF",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 164,
   },
   {
-      "x": "TR",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 163
+    x: "TR",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 163,
   },
   {
-      "x": "RU",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 148
+    x: "RU",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 148,
   },
   {
-      "x": "AT",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 147
+    x: "AT",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 147,
   },
   {
-      "x": "BA",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 147
+    x: "BA",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 147,
   },
   {
-      "x": "PE",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 139
+    x: "PE",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 139,
   },
   {
-      "x": "KP",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 124
+    x: "KP",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 124,
   },
   {
-      "x": "VC",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 124
+    x: "VC",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 124,
   },
   {
-      "x": "KR",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 123
+    x: "KR",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 123,
   },
   {
-      "x": "EC",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 116
+    x: "EC",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 116,
   },
   {
-      "x": "SE",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 114
+    x: "SE",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 114,
   },
   {
-      "x": "KW",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 108
+    x: "KW",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 108,
   },
   {
-      "x": "PL",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 106
+    x: "PL",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 106,
   },
   {
-      "x": "CW",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 105
+    x: "CW",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 105,
   },
   {
-      "x": "UG",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 105
+    x: "UG",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 105,
   },
   {
-      "x": "BE",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 103
+    x: "BE",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 103,
   },
   {
-      "x": "HK",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 100
+    x: "HK",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 100,
   },
   {
-      "x": "OM",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 100
+    x: "OM",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 100,
   },
   {
-      "x": "IL",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 88
+    x: "IL",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 88,
   },
   {
-      "x": "UA",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 88
+    x: "UA",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 88,
   },
   {
-      "x": "NO",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 84
+    x: "NO",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 84,
   },
   {
-      "x": "SL",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 83
+    x: "SL",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 83,
   },
   {
-      "x": "FI",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 80
+    x: "FI",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 80,
   },
   {
-      "x": "PT",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 80
+    x: "PT",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 80,
   },
   {
-      "x": "GH",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 77
+    x: "GH",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 77,
   },
   {
-      "x": "TW",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 76
+    x: "TW",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 76,
   },
   {
-      "x": "BH",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 71
+    x: "BH",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 71,
   },
   {
-      "x": "MK",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 62
+    x: "MK",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 62,
   },
   {
-      "x": "GR",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 61
+    x: "GR",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 61,
   },
   {
-      "x": "UY",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 59
+    x: "UY",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 59,
   },
   {
-      "x": "AD",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 57
+    x: "AD",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 57,
   },
   {
-      "x": "ZW",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 57
+    x: "ZW",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 57,
   },
   {
-      "x": "AF",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 56
+    x: "AF",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 56,
   },
   {
-      "x": "DK",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 55
+    x: "DK",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 55,
   },
   {
-      "x": "EG",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 55
+    x: "EG",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 55,
   },
   {
-      "x": "AM",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 54
+    x: "AM",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 54,
   },
   {
-      "x": "CZ",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 54
+    x: "CZ",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 54,
   },
   {
-      "x": "IS",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 54
+    x: "IS",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 54,
   },
   {
-      "x": "SV",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 53
+    x: "SV",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 53,
   },
   {
-      "x": "PA",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 48
+    x: "PA",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 48,
   },
   {
-      "x": "GE",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 47
+    x: "GE",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 47,
   },
   {
-      "x": "BY",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 46
+    x: "BY",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 46,
   },
   {
-      "x": "MM",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 45
+    x: "MM",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 45,
   },
   {
-      "x": "CU",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 43
+    x: "CU",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 43,
   },
   {
-      "x": "EE",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 43
+    x: "EE",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 43,
   },
   {
-      "x": "GN",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 43
+    x: "GN",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 43,
   },
   {
-      "x": "TT",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 43
+    x: "TT",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 43,
   },
   {
-      "x": "VN",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 41
+    x: "VN",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 41,
   },
   {
-      "x": "PR",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 38
+    x: "PR",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 38,
   },
   {
-      "x": "TN",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 38
+    x: "TN",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 38,
   },
   {
-      "x": "PG",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 34
+    x: "PG",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 34,
   },
   {
-      "x": "IM",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 33
+    x: "IM",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 33,
   },
   {
-      "x": "MU",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 33
+    x: "MU",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 33,
   },
   {
-      "x": "CD",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 29
+    x: "CD",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 29,
   },
   {
-      "x": "BW",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 28
+    x: "BW",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 28,
   },
   {
-      "x": "MA",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 28
+    x: "MA",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 28,
   },
   {
-      "x": "CI",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 27
+    x: "CI",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 27,
   },
   {
-      "x": "LY",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 27
+    x: "LY",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 27,
   },
   {
-      "x": "PY",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 27
+    x: "PY",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 27,
   },
   {
-      "x": "CR",
-      "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": 26
-  }
-]
+    x: "CR",
+    M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: 26,
+  },
+];
 
 const sampleLookUp = {
-  "UN": {
-      "label": "Unknown"
+  UN: {
+    label: "Unknown",
   },
-  "M_SPRINKSIGHTS_MENTIONS_COUNT_SUM": {
-      "label": "Mentions"
+  M_SPRINKSIGHTS_MENTIONS_COUNT_SUM: {
+    label: "Mentions",
   },
-  "IN": {
-      "label": "India"
+  IN: {
+    label: "India",
   },
-  "US": {
-      "label": "United States"
+  US: {
+    label: "United States",
   },
-  "PK": {
-      "label": "Pakistan"
+  PK: {
+    label: "Pakistan",
   },
-  "GB": {
-      "label": "United Kingdom"
+  GB: {
+    label: "United Kingdom",
   },
-  "CA": {
-      "label": "Canada"
+  CA: {
+    label: "Canada",
   },
-  "AE": {
-      "label": "United Arab Emirates"
+  AE: {
+    label: "United Arab Emirates",
   },
-  "AU": {
-      "label": "Australia"
+  AU: {
+    label: "Australia",
   },
-  "LK": {
-      "label": "Sri Lanka"
+  LK: {
+    label: "Sri Lanka",
   },
-  "FR": {
-      "label": "France"
+  FR: {
+    label: "France",
   },
-  "NP": {
-      "label": "Nepal"
+  NP: {
+    label: "Nepal",
   },
-  "DE": {
-      "label": "Germany"
+  DE: {
+    label: "Germany",
   },
-  "BR": {
-      "label": "Brazil"
+  BR: {
+    label: "Brazil",
   },
-  "ID": {
-      "label": "Indonesia"
+  ID: {
+    label: "Indonesia",
   },
-  "ES": {
-      "label": "Spain"
+  ES: {
+    label: "Spain",
   },
-  "MY": {
-      "label": "Malaysia"
+  MY: {
+    label: "Malaysia",
   },
-  "NG": {
-      "label": "Nigeria"
+  NG: {
+    label: "Nigeria",
   },
-  "SA": {
-      "label": "Saudi Arabia"
+  SA: {
+    label: "Saudi Arabia",
   },
-  "MX": {
-      "label": "Mexico"
+  MX: {
+    label: "Mexico",
   },
-  "JP": {
-      "label": "Japan"
+  JP: {
+    label: "Japan",
   },
-  "CO": {
-      "label": "Colombia"
+  CO: {
+    label: "Colombia",
   },
-  "ZA": {
-      "label": "South Africa"
+  ZA: {
+    label: "South Africa",
   },
-  "PH": {
-      "label": "Philippines"
+  PH: {
+    label: "Philippines",
   },
-  "TH": {
-      "label": "Thailand"
+  TH: {
+    label: "Thailand",
   },
-  "BD": {
-      "label": "Bangladesh"
+  BD: {
+    label: "Bangladesh",
   },
-  "SG": {
-      "label": "Singapore"
+  SG: {
+    label: "Singapore",
   },
-  "KM": {
-      "label": "Comoros"
+  KM: {
+    label: "Comoros",
   },
-  "NL": {
-      "label": "Netherlands"
+  NL: {
+    label: "Netherlands",
   },
-  "AR": {
-      "label": "Argentina"
+  AR: {
+    label: "Argentina",
   },
-  "VE": {
-      "label": "Venezuela"
+  VE: {
+    label: "Venezuela",
   },
-  "NZ": {
-      "label": "New Zealand"
+  NZ: {
+    label: "New Zealand",
   },
-  "IT": {
-      "label": "Italy"
+  IT: {
+    label: "Italy",
   },
-  "MV": {
-      "label": "Maldives"
+  MV: {
+    label: "Maldives",
   },
-  "CH": {
-      "label": "Switzerland"
+  CH: {
+    label: "Switzerland",
   },
-  "QA": {
-      "label": "Qatar"
+  QA: {
+    label: "Qatar",
   },
-  "CL": {
-      "label": "Chile"
+  CL: {
+    label: "Chile",
   },
-  "TZ": {
-      "label": "Tanzania"
+  TZ: {
+    label: "Tanzania",
   },
-  "KE": {
-      "label": "Kenya"
+  KE: {
+    label: "Kenya",
   },
-  "CN": {
-      "label": "China"
+  CN: {
+    label: "China",
   },
-  "IE": {
-      "label": "Ireland"
+  IE: {
+    label: "Ireland",
   },
-  "CF": {
-      "label": "Central African Republic"
+  CF: {
+    label: "Central African Republic",
   },
-  "TR": {
-      "label": "Turkey"
+  TR: {
+    label: "Turkey",
   },
-  "RU": {
-      "label": "Russia"
+  RU: {
+    label: "Russia",
   },
-  "AT": {
-      "label": "Austria"
+  AT: {
+    label: "Austria",
   },
-  "BA": {
-      "label": "Bosnia and Herzegovina"
+  BA: {
+    label: "Bosnia and Herzegovina",
   },
-  "PE": {
-      "label": "Peru"
+  PE: {
+    label: "Peru",
   },
-  "KP": {
-      "label": "North Korea"
+  KP: {
+    label: "North Korea",
   },
-  "VC": {
-      "label": "Saint Vincent and the Grenadines"
+  VC: {
+    label: "Saint Vincent and the Grenadines",
   },
-  "KR": {
-      "label": "South Korea"
+  KR: {
+    label: "South Korea",
   },
-  "EC": {
-      "label": "Ecuador"
+  EC: {
+    label: "Ecuador",
   },
-  "SE": {
-      "label": "Sweden"
+  SE: {
+    label: "Sweden",
   },
-  "KW": {
-      "label": "Kuwait"
+  KW: {
+    label: "Kuwait",
   },
-  "PL": {
-      "label": "Poland"
+  PL: {
+    label: "Poland",
   },
-  "CW": {
-      "label": "Curacao"
+  CW: {
+    label: "Curacao",
   },
-  "UG": {
-      "label": "Uganda"
+  UG: {
+    label: "Uganda",
   },
-  "BE": {
-      "label": "Belgium"
+  BE: {
+    label: "Belgium",
   },
-  "HK": {
-      "label": "Hong Kong"
+  HK: {
+    label: "Hong Kong",
   },
-  "OM": {
-      "label": "Oman"
+  OM: {
+    label: "Oman",
   },
-  "IL": {
-      "label": "Israel"
+  IL: {
+    label: "Israel",
   },
-  "UA": {
-      "label": "Ukraine"
+  UA: {
+    label: "Ukraine",
   },
-  "NO": {
-      "label": "Norway"
+  NO: {
+    label: "Norway",
   },
-  "SL": {
-      "label": "Sierra Leone"
+  SL: {
+    label: "Sierra Leone",
   },
-  "FI": {
-      "label": "Finland"
+  FI: {
+    label: "Finland",
   },
-  "PT": {
-      "label": "Portugal"
+  PT: {
+    label: "Portugal",
   },
-  "GH": {
-      "label": "Ghana"
+  GH: {
+    label: "Ghana",
   },
-  "TW": {
-      "label": "Taiwan"
+  TW: {
+    label: "Taiwan",
   },
-  "BH": {
-      "label": "Bahrain"
+  BH: {
+    label: "Bahrain",
   },
-  "MK": {
-      "label": "Macedonia"
+  MK: {
+    label: "Macedonia",
   },
-  "GR": {
-      "label": "Greece"
+  GR: {
+    label: "Greece",
   },
-  "UY": {
-      "label": "Uruguay"
+  UY: {
+    label: "Uruguay",
   },
-  "AD": {
-      "label": "Andorra"
+  AD: {
+    label: "Andorra",
   },
-  "ZW": {
-      "label": "Zimbabwe"
+  ZW: {
+    label: "Zimbabwe",
   },
-  "AF": {
-      "label": "Afghanistan"
+  AF: {
+    label: "Afghanistan",
   },
-  "DK": {
-      "label": "Denmark"
+  DK: {
+    label: "Denmark",
   },
-  "EG": {
-      "label": "Egypt"
+  EG: {
+    label: "Egypt",
   },
-  "AM": {
-      "label": "Armenia"
+  AM: {
+    label: "Armenia",
   },
-  "CZ": {
-      "label": "Czech Republic"
+  CZ: {
+    label: "Czech Republic",
   },
-  "IS": {
-      "label": "Iceland"
+  IS: {
+    label: "Iceland",
   },
-  "SV": {
-      "label": "El Salvador"
+  SV: {
+    label: "El Salvador",
   },
-  "PA": {
-      "label": "Panama"
+  PA: {
+    label: "Panama",
   },
-  "GE": {
-      "label": "Georgia"
+  GE: {
+    label: "Georgia",
   },
-  "BY": {
-      "label": "Belarus"
+  BY: {
+    label: "Belarus",
   },
-  "MM": {
-      "label": "Myanmar"
+  MM: {
+    label: "Myanmar",
   },
-  "CU": {
-      "label": "Cuba"
+  CU: {
+    label: "Cuba",
   },
-  "EE": {
-      "label": "Estonia"
+  EE: {
+    label: "Estonia",
   },
-  "GN": {
-      "label": "Guinea"
+  GN: {
+    label: "Guinea",
   },
-  "TT": {
-      "label": "Trinidad and Tobago"
+  TT: {
+    label: "Trinidad and Tobago",
   },
-  "VN": {
-      "label": "Vietnam"
+  VN: {
+    label: "Vietnam",
   },
-  "PR": {
-      "label": "Puerto Rico"
+  PR: {
+    label: "Puerto Rico",
   },
-  "TN": {
-      "label": "Tunisia"
+  TN: {
+    label: "Tunisia",
   },
-  "PG": {
-      "label": "Papua New Guinea"
+  PG: {
+    label: "Papua New Guinea",
   },
-  "IM": {
-      "label": "Isle of Man"
+  IM: {
+    label: "Isle of Man",
   },
-  "MU": {
-      "label": "Mauritius"
+  MU: {
+    label: "Mauritius",
   },
-  "CD": {
-      "label": "Democratic Republic of the Congo"
+  CD: {
+    label: "Democratic Republic of the Congo",
   },
-  "BW": {
-      "label": "Botswana"
+  BW: {
+    label: "Botswana",
   },
-  "MA": {
-      "label": "Morocco"
+  MA: {
+    label: "Morocco",
   },
-  "CI": {
-      "label": "Ivory Coast"
+  CI: {
+    label: "Ivory Coast",
   },
-  "LY": {
-      "label": "Libya"
+  LY: {
+    label: "Libya",
   },
-  "PY": {
-      "label": "Paraguay"
+  PY: {
+    label: "Paraguay",
   },
-  "CR": {
-      "label": "Costa Rica"
-  }
-}
+  CR: {
+    label: "Costa Rica",
+  },
+};
 export default function App() {
-
   return (
     <div className="outerContainer">
-      
       {/* <CountryDist data={CountryFormatedData} />
       <CountrySubDivision country="IN" data={SubCountryINDIAFormatedData} />
       <CountrySubDivision country="US" data={SubCountryUSAFormatedData} />
       <CountryDistributionView data={SubCountryViewFormatedData} country="IN" /> */}
-      <DistributionMap lookupMap={sampleLookUp} data={sampleData} xKey={"x"} yKey={["M_SPRINKSIGHTS_MENTIONS_COUNT_SUM"]} region="world" />
-     
+      <DistributionMap
+        lookupMap={sampleLookUp}
+        data={sampleData}
+        xKey={"x"}
+        yKey={["M_SPRINKSIGHTS_MENTIONS_COUNT_SUM"]}
+        region="world"
+      />
     </div>
   );
 }
-
